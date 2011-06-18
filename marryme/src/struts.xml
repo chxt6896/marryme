@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+          "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="Marryme" extends="struts-default" namespace="/">
+		<action name="">
+			<result>/page/call.jsp?opt=1</result>
+		</action>
+		<action name="index" class="action.LoverAction" method="index">
+			<result name="success">/page/call.jsp?opt=1</result>
+			<result name="error"></result>
+		</action>
+		<action name="main" class="action.LoverAction" method="main">
+			<result name="self">/page/single.jsp?opt=0</result>
+			<result name="other">/page/single.jsp?opt=1</result>
+			<result name="error"></result>
+		</action>
+		<action name="loverupdate" class="action.LoverUpdateAction">
+			<result name="success">/page/single.jsp?opt=2</result>
+			<result name="error">/page/single.jsp?opt=3</result>
+		</action>
+	</package>
+</struts>
